@@ -144,6 +144,29 @@ h3,
   }
 }
 /*  */
+/* Mobile horizontal scroll */
+.products-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 12px;
+  padding: 8px 4px 16px;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.products-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-scroll-item {
+  flex: 0 0 70%; /* 1.5 cards visible = ~70% width per card */
+  scroll-snap-align: start;
+}
+
+/*  */
 .food-menu .nav-link {
   margin-bottom: 15px;
   color: var(--bs-gray);
